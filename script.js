@@ -1,4 +1,4 @@
-document.querySelector('body').onmousemove = (e) => {
+document.querySelector('html').onmousemove = (e) => {
     requestAnimationFrame(() =>{
         const x = e.pageX - e.target.offsetLeft;
         const y = e.pageY - e.target.offsetTop;
@@ -17,8 +17,20 @@ function myFunction() {
     }
 }
 
-$(".aboutme_b").click(function() {
-    $('html,body').animate({
-        scrollTop: $(".slide_1").offset().top},
-        'slow');
+$(document).ready(function(){
+  $("a").on('click', function(event) {
+
+    if (this.hash !== "") {
+      event.preventDefault();
+
+      var hash = this.hash;
+
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        window.location.hash = hash;
+      });
+    }
+  });
 });
