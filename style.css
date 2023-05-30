@@ -2,7 +2,7 @@ html{
     scroll-behavior: smooth;    
 }    
     body, html{
-    height: 425%;
+    height: 525%;
     display: grid;
 }
 body {
@@ -119,20 +119,25 @@ header img{
 #projects{
     width: 100%;
     position: absolute;
-    top: 250%;
-    height: 50%;
+    top: 250vh;
+    height: 50vh;
     display: flex;
     flex-direction: row;
     flex-flow: wrap;
 }
+
+#projects a{
+    margin: 0.5%;
+}
+
 .projects{
     border: 3px solid #b2d7f0;
     display: block;
     border-radius: 6px;
     text-align: center;
     margin: 2.5%;
-    width: 380px;
-    height: 193px;
+    width: 23vw;
+    height: 40vh;
     font-size: 40px;
     box-shadow: 0 3px 10px #141414;
     color: white;
@@ -148,10 +153,47 @@ header img{
     align-items: center;
 }
 
+/*Products*/
+#products{
+    width: 100%;
+    position: absolute;
+    top: 350vh;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+}
+
+#products a{
+    margin: 0.75%;
+}
+.supplier{
+    border: 3px solid #b2d7f0;
+    display: block;
+    border-radius: 6px;
+    text-align: center;
+    margin: 2.5%;
+    width: 30vw;
+    height: 40vh;
+    font-size: 40px;
+    box-shadow: 0 3px 10px #141414;
+    color: white;
+}
+.supplier:hover{
+    border: 1px solid #b2d7f0;
+    cursor: pointer;
+}
+.supplier img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    align-items: center;
+}
+
 /*slides*/
 .slide_1{
     width: 100%;
-    top: 100%;
+    top: 100vh;
     position: absolute;
     font-weight: 900;
     font-size: 100px;
@@ -166,7 +208,7 @@ header img{
 }
 .slide_2{
     width: 100%;
-    top: 200%;
+    top: 200vh;
     position: absolute;
     font-weight: 900;
     font-size: 100px;
@@ -181,11 +223,26 @@ header img{
 }
 .slide_3{
     width: 100%;
-    top: 300%;
+    top: 300vh;
     position: absolute;
     font-weight: 900;
     font-size: 100px;
     background-image: url("https://github.com/PaytonTHill/Precision_Cabinets/blob/main/kitchen-2400367_1920.jpg?raw=true");
+    min-height: 50%;
+    max-height: 75%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;
+}
+.slide_4{
+    width: 100%;
+    top: 400vh;
+    position: absolute;
+    font-weight: 900;
+    font-size: 100px;
+    background-image: url("https://lh3.googleusercontent.com/fife/APg5EObHpRRZzeR8tASifbFTglploD_Jv_U3fUPF-HEo3ArbxsFZciPxyQhmUrmtnrjlRd83XZ2eIQVRTyYf0KLU-ZZ3lyAxvep8LN6kNtHi5vyvH_DLFg6ogCKkWwUw81oMNaviNoTgDfg2o1Owp3ap1I-6kryetqkgBtLHxo9gnBCl4iMfsx7W_NLpRT5iXOGBzFmKFlB5CWQEmiyVT5NwZAxbXqF26tE-Rf8-TBJmjQvXFsVVDbt7-2YGVChkKGtqa0opp4dhPP3IleJTloHviF1bKgPGZqvKU_o5lPi0RcdyCjno-rUO7zVba2N57IV8D3IGR8muHLid__aMQ2QaXloITYtZSOdKYtGq97KSXQVjiB2uK021wZJ1s0vw0FYO337ArSm1qOnvomQjaPHn8wdf9F4H_wY2rKHEMHaMXjmBoty1wO8H2Nb3QIVgGjlE12g3cDp-YQ4nLeO5ysXaLZTe4BVJjDRxTy_9wdDyRNV_vNPW7pGPhbdubTaMvBYJbkb0EyMNJ2bf3DFz5oqjrOqyzkQmDWdd8IwXLQ5qmCe1JDz2owwalXKmv0Ka0-7ba0V_STPyT4KuEGh1GyG40PRnwNq1YOzlgrG2B7Bzdzf8eDSKE121gwjHMsoIB0uzkF4gwNGabAzowjix2WKABjGu_N_DV1kELVOWaZxnlfYLH_BdcdGSmDprnpBF-2PRp2T9KEk1UvugRGPHJ-eik4V7eOThMs26eniEveilWUBE6SKf8V-PVvLuYkEZfoACLTrBGmP6F4Sy19fBbgH0Uj3FPypJthM9mxne-mFCClIwpGZc8OZ4E0a7kJ1SDuN3ijvjrGmzxLsn-a2YiETkO2sKCx-F70qWsQgECl6iU6pYa1YSbLYGO7Oy23XlR6rhgBhMM-RNPEWy078Y-Io1qt8jeLcxn-miEQ6AwacvQZ74d_4OQo0gD6v6ZL8UDUHq16Zpu6iLDuoNiKcOTUlzUgkRiCdF8zKMJFTBhyEYKGE_Bkhx4jsZnXvt8kWVnWyadJqca8S2zAYNidALGa24VawgF9pMj8apNFOSkotKjYXMYIGvvpcdpe6FgKcjy4fHPA2gyjuR6uA47yHqC2nKSalohj0S3dLuLeOTjvdHz5yxjo_FcIrmmGFmmmSwbeDA_2YpnOHjhtRf0QI4utMGD5sS3j66JajoSqR1t9Ub2JLJMdPHDsDLXoTPvEamCEWmpInTMLm3nvJZS_qBqSYxRh4B1g2ktOXm6v2SWMJBIkD0QkOpJ8JZZVz795K0YUkWeoE79-8ldidUJHVJ4uWbx5dNouuYZKfliNzB3JF1i8xXA19lpJ-Gkz3MeEqrwwyTO4cXh_WXBMytEUuV44FfdXwI0rTg7qw9GHe6rx8mDCb7-VMfsLL9ys-diFn_9b8yUOVBvst05CeC4eCUxu32rU6KHqy7skAt4OSBg2ZsARRQAgnxVLOnQQxvggq3s9DkmK23VqYexK_8UF-Bm6tf8nc7mIify2wqOYtTJ5L1sy3hZxuQNPuYFNGbdc_uCee7KB55y56e2tst5frZqKVQze0CLFTBsjMpNDs=s1008-w1008-h756-s-no?authuser=0");
     min-height: 50%;
     max-height: 75%;
     background-attachment: fixed;
@@ -199,7 +256,7 @@ header img{
 #contact_me{
     position: absolute;
     color: white;
-    top: 350%;
+    top: 450vh;
     left: 0;
     right: 0;
 }
@@ -229,15 +286,12 @@ input[type=submit]:hover {
     padding: 10px;
 }
 .column {
-    float: left;
     width: 50%;
     margin-top: 6px;
     padding: 20px;
-}
-.column img{
-    width: 70%;
-    height: 496px;
-    object-fit: scale-down;
+    left: 25%;
+    right: 25%;
+    position: relative;
 }
 
 .row:after {
