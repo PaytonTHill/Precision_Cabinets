@@ -189,6 +189,15 @@ header img{
     object-fit: cover;
     align-items: center;
 }
+.supplier h6{
+    font-size: 5vh;
+    position: absolute;
+    text-align: center;
+    color: #141414;
+    width: 30vw;
+    height: 40vh;
+    font-weight: bold;
+}
 
 /*slides*/
 .slide_1{

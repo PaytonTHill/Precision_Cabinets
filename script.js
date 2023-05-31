@@ -35,45 +35,37 @@ $(document).ready(function(){
   });
 });
 
-// Send email when the user clicks submit
-function sendEmail() {
-  var email = document.getElementById("email").value;
-  var fname = document.getElementById("fname").value;
-  var lname = document.getElementById("lname").value;
-  var subject = document.getElementById("subject").value;
+// Initialize EmailJS with your user ID
+emailjs.init("service_9czf6os");
 
-  var message = `
-    From: ${fname} ${lname}
-    Email: ${email}
-    Subject: ${subject}
+// Get the form element
+const form = document.getElementById("contactForm");
 
-    ${document.getElementById("subject").value}
-  `;
-
-  var xhr = new XMLHttpRequest();
-  xhr.open("POST", "/action_page.php");
-  xhr.setRequestHeader("Content-type", "text/plain");
-  xhr.send(message);
-
-  // Show a popup that confirms the email was sent
-  var div = document.createElement("div");
-  div.innerHTML = "Your email was sent!";
-  div.style.backgroundColor = "green";
-  div.style.color = "white";
-  div.style.position = "fixed";
-  div.style.top = "100px";
-  div.style.left = "50px";
-  div.style.width = "300px";
-  div.style.padding = "10px";
-  div.style.zIndex = "1000";
-
-  document.body.appendChild(div);
-
-  // Hide the popup after 5 seconds
-  setTimeout(function() {
-    div.parentNode.removeChild(div);
-  }, 5000);
-}
-
-// Add event listener to the submit button
-document.getElementById("submit").addEventListener("click", sendEmail);
+// Add event listener for form submission
+form.addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent the default form submission
+  
+  // Get the input values
+  const email = document.getElementById("email").value;
+  const fname = document.getElementById("fname").value;
+  const lname = document.getElementById("lname").value;
+  const subject = document.getElementById("subject").value;
+  const message = document.getElementById("message").value;
+  
+  // Send the email
+  emailjs.send("service_9czf6os", "template_ecmpnun", {
+    to_email: email,
+    from_name: fname + " " + lname,
+    subject: subject,
+    message: message
+  })
+  .then(function(response) {
+    console.log("Email sent successfully:", response);
+    // Redirect the user or show a success message
+    window.location.href = "/contact.html";
+  })
+  .catch(function(error) {
+    console.error("Error sending email:", error);
+    // Handle the error or show an error message
+  });
+});
