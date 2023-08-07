@@ -17,11 +17,8 @@ body {
 }
 
 .top{
-    width: 100%;
-    top: 0;
     position: absolute;
-    height: 0.01%;
-    z-index: 0;
+    right: 3%;
 }
 
 /*Navigation Bar*/
@@ -334,7 +331,6 @@ footer{
 }  
 footer ul{
     display: block;
-    margin-left: 140px;
     margin-top: 3px;
 }
 footer li {  
@@ -354,6 +350,11 @@ footer img{
     height: 20px;
     position: absolute;
     left: 2%;
+}
+.warranty {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
 }
 @media screen and (max-width: 600px) {
 .footernav a:not(:first-child) {display: none;}
